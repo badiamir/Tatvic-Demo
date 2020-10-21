@@ -30,7 +30,7 @@
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KGKJ3SM');</script>
+})(window,document,'script','dataLayer','GTM-MWH45J5');</script>
 <!-- End Google Tag Manager -->
 
 	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
@@ -396,6 +396,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+<script>
+// An example of measuring promotion views. This example assumes that
+// information about the promotions displayed is available when the page loads.
+dataLayer.push({
+ 'event': 'promotionImpression',
+  'ecommerce': {
+    'promoView': {
+      'promotions': [               //Array of promoFieldObjects.
+       {
+         'id': 'RB#1',              //ID or Name is required.
+         'name': 'Travel Smart',    //Name of the banner
+         'creative': 'Summer Freecharge',                 
+         'position': 'banner1'
+       },
+       {
+         'id': 'RB#2',              //ID or Name is required.
+         'name': 'North & West',    //Name of the banner
+         'creative': 'NW Freecharge',                 
+         'position': 'banner2'
+       }]
+    }
+  }
+});
+</script>
 
 	</body>
 </html>
