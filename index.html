@@ -421,6 +421,41 @@ dataLayer.push({
   }
 });
 </script>
+		
+<script>
+// Product impressions are sent by pushing an impressions object
+// containing one or more impressionFieldObjects.
+dataLayer.push({
+ 'event': 'productImpression',
+  'ecommerce': { 
+    'currencyCode': 'INR',                     //Local currency is optional.
+    'impressions': [
+     {
+       'name': 'Triblend Android T-Shirt',     //Product Name or Product ID is required.
+       'id': '12345',			           //Product ID
+       'price': '15.25',                       //Product Price
+       'brand': 'Google',                      //Product Brand
+       'category': 'Apparel/Men/T-shirt',      //Product Category/Product Subcategory1/Product Subcategory2
+       'variant': 'Gray',                      //Product Color
+       'list': 'Search Results',               //The list or collection to which the product belongs (e.g. Search Results, Recommendations, Category pages etc.)
+       'position': 1,                          //Product Position in the list
+       'dimension1' : 'Search page'            //Page type (e.g Category page,Product Pages, Homepage, Checkout Pages)
+     },
+     {
+       'name': 'Donut Friday Scented T-Shirt',
+       'id': '67890',
+       'price': '33.75',
+       'brand': 'Google',
+       'category': 'Apparel/Men/T-shirt',      
+       'variant': 'Black',
+       'list': 'Search Results',
+       'position': 2,
+       'dimension1' : 'Search page'
+     }]
+  }
+});
+</script>
+
 
 	</body>
 </html>
