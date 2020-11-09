@@ -141,7 +141,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<div class="col-md-12">
 						<div class="owl-carousel owl-carousel-carousel">
 							<div class="item">
-								<div class="gtco-item">
+								<div class="gtco-item" id="#product">
 									<a href="#"><img src="images/img_1.jpg" alt="" class="img-responsive"></a>
 									<h2><a href="#">Paper Cup</h2></a>
 									<p class="role">Web Design &amp; Mobile</p>
@@ -347,7 +347,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
+	<script>
+		document.getElementById('product').click(function() {
+			console.log('click')
+    // Product clicks are sent by pushing a product object
+    dataLayer.push({
+      'event': 'productClick',
+      'ecommerce': {
+        'currencyCode': 'INR',   
+        'click': {
+          'actionField': {'list': 'Search Results'},   //Optional list property.
+          'products': [{
+             'name': 'Triblend Android T-Shirt',       //Product Name or Product ID is
+                                                       //Required.
+             'id': '12345',			                       //Product ID
+             'price': '15.25',                         //Product Price
+             'brand': 'Google',                        //Product Brand
+             'category': 'Apparel/Men/T-shirt',        //Product Category/Product 
+                                                       //Subcategory1/Product Subcategory2
+             'variant': 'Gray',                        //Product Color
+             'position': 1,                            //Product Position in the list
+             'dimension1' : 'Search page'              //Page type (e.g Category page,Product
+                                                       //Pages, Homepage, Checkout Pages)
+           }]
+         }
+       }
+    });
+  
+		})	
+	</script>
 	</body>
 </html>
 
