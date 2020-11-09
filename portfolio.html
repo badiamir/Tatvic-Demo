@@ -348,7 +348,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script>
-		document.getElementById('product').click(function() {
+		document.getElementById('product').addEventListener('click', function() {
 			console.log('click')
     // Product clicks are sent by pushing a product object
     dataLayer.push({
